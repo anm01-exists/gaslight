@@ -1,89 +1,117 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /**
+   * Custom Theme Colors
+   * Light: #BF9264 #6F826A #BBD8A3 #F0F1C5
+   * Dark: #000000 #282A3A #735F32 #C69749
+   */
   :root {
-    /* Modern beige and grey theme */
-    --background: 39 100% 98%; /* Very light beige */
-    --foreground: 0 0% 15%; /* Dark grey text */
+    /* Light cream background */
+    --background: 60 18% 86%;
+    --foreground: 30 20% 20%;
 
-    --card: 0 0% 100%; /* Pure white for cards */
-    --card-foreground: 0 0% 15%;
+    /* White cards with warm foreground */
+    --card: 0 0% 100%;
+    --card-foreground: 30 20% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 30 20% 20%;
 
-    --primary: 33 55% 45%; /* Warm beige primary */
-    --primary-foreground: 0 0% 100%;
+    /* Warm brown primary #BF9264 */
+    --primary: 32 34% 57%;
+    --primary-foreground: 60 18% 86%;
 
-    --secondary: 39 50% 92%; /* Light beige secondary */
-    --secondary-foreground: 0 0% 20%;
+    /* Light green secondary #BBD8A3 */
+    --secondary: 87 37% 74%;
+    --secondary-foreground: 30 20% 20%;
 
-    --muted: 39 30% 95%; /* Very light beige muted */
-    --muted-foreground: 0 0% 45%;
+    /* Light sage muted #6F826A */
+    --muted: 99 8% 47%;
+    --muted-foreground: 30 20% 40%;
 
-    --accent: 204 94% 94%; /* Light blue accent */
-    --accent-foreground: 204 100% 20%;
+    /* Light green accent */
+    --accent: 87 37% 74%;
+    --accent-foreground: 30 20% 20%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 39 20% 88%; /* Light beige border */
-    --input: 39 20% 88%;
-    --ring: 33 55% 45%;
+    /* Sage green borders */
+    --border: 99 8% 80%;
+    --input: 99 8% 85%;
+    --ring: 32 34% 57%;
 
-    --radius: 8px;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 20%;
-    --sidebar-primary: 33 55% 45%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 39 50% 92%;
-    --sidebar-accent-foreground: 0 0% 20%;
-    --sidebar-border: 39 20% 88%;
-    --sidebar-ring: 33 55% 45%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 98%;
+
+    --sidebar-background: 60 18% 90%;
+    --sidebar-foreground: 30 20% 25%;
+    --sidebar-primary: 32 34% 57%;
+    --sidebar-primary-foreground: 60 18% 86%;
+    --sidebar-accent: 87 37% 74%;
+    --sidebar-accent-foreground: 30 20% 20%;
+    --sidebar-border: 99 8% 80%;
+    --sidebar-ring: 32 34% 57%;
   }
 
   .dark {
-    /* Dark mode with dark grey and warm accents */
-    --background: 0 0% 8%; /* Very dark grey */
-    --foreground: 39 20% 90%; /* Light beige text */
+    /* Pure black background */
+    --background: 0 0% 0%;
+    --foreground: 40 36% 71%;
 
-    --card: 0 0% 12%; /* Dark grey cards */
-    --card-foreground: 39 20% 90%;
+    /* Dark blue-gray cards #282A3A */
+    --card: 231 15% 20%;
+    --card-foreground: 40 36% 71%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 39 20% 90%;
+    --popover: 231 15% 20%;
+    --popover-foreground: 40 36% 71%;
 
-    --primary: 33 55% 55%; /* Brighter beige in dark mode */
-    --primary-foreground: 0 0% 8%;
+    /* Golden brown primary #C69749 */
+    --primary: 40 36% 71%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 15%; /* Dark grey secondary */
-    --secondary-foreground: 39 20% 90%;
+    /* Dark blue-gray secondary */
+    --secondary: 231 15% 25%;
+    --secondary-foreground: 40 36% 71%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    /* Dark olive muted #735F32 */
+    --muted: 49 39% 33%;
+    --muted-foreground: 40 36% 60%;
 
-    --accent: 204 100% 15%; /* Dark blue accent */
-    --accent-foreground: 204 94% 90%;
+    /* Dark blue-gray accent */
+    --accent: 231 15% 25%;
+    --accent-foreground: 40 36% 71%;
 
-    --destructive: 0 75% 55%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 18%; /* Dark border */
-    --input: 0 0% 18%;
-    --ring: 33 55% 55%;
+    /* Dark olive borders */
+    --border: 49 39% 25%;
+    --input: 49 39% 20%;
+    --ring: 40 36% 71%;
 
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 39 20% 90%;
-    --sidebar-primary: 33 55% 55%;
-    --sidebar-primary-foreground: 0 0% 8%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 39 20% 90%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 33 55% 55%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 98%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 40 36% 65%;
+    --sidebar-primary: 40 36% 71%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 231 15% 25%;
+    --sidebar-accent-foreground: 40 36% 71%;
+    --sidebar-border: 49 39% 25%;
+    --sidebar-ring: 40 36% 71%;
   }
 }
 
@@ -93,88 +121,38 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-@layer components {
-  .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-student hover:shadow-student-lg;
-  }
-
-  .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium px-6 py-3 rounded-lg transition-all duration-200 border border-border;
-  }
-
-  .gradient-primary {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--primary)) 0%,
-      hsl(33 60% 55%) 100%
-    );
-  }
-
-  .gradient-background {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--background)) 0%,
-      hsl(39 50% 96%) 100%
-    );
-  }
-
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-student-lg hover:-translate-y-1;
-  }
-
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary to-student-beige-600 bg-clip-text text-transparent;
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 }
 
 @layer utilities {
-  .animate-fade-in-up {
-    animation: fade-in 0.6s ease-out forwards;
+  .text-balance {
+    text-wrap: balance;
   }
+}
 
-  .animate-slide-up {
-    animation: slide-up 0.4s ease-out forwards;
-  }
+/* Custom scrollbar for dark theme */
+.dark {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(60 60 60) rgb(20 20 20);
+}
 
-  /* Performance optimizations */
-  .will-change-transform {
-    will-change: transform;
-  }
+.dark::-webkit-scrollbar {
+  width: 6px;
+}
 
-  .will-change-opacity {
-    will-change: opacity;
-  }
+.dark::-webkit-scrollbar-track {
+  background: rgb(20 20 20);
+}
 
-  .backface-hidden {
-    backface-visibility: hidden;
-  }
+.dark::-webkit-scrollbar-thumb {
+  background: rgb(60 60 60);
+  border-radius: 3px;
+}
 
-  /* Shimmer animation for loading skeletons */
-  @keyframes shimmer {
-    0% {
-      background-position: -200% 0;
-    }
-    100% {
-      background-position: 200% 0;
-    }
-  }
-
-  .animate-shimmer {
-    animation: shimmer 2s infinite;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
-    background-size: 200% 100%;
-  }
+.dark::-webkit-scrollbar-thumb:hover {
+  background: rgb(80 80 80);
 }
