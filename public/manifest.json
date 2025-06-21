@@ -1,0 +1,83 @@
+{
+  "name": "StudyHub - Student Marketplace",
+  "short_name": "StudyHub",
+  "description": "Student platform for assignments, services, and resources",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffbf5",
+  "theme_color": "#b27934",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity", "social"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "StudyHub mobile interface"
+    },
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1200x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "StudyHub desktop interface"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Assignments",
+      "short_name": "Assignments",
+      "description": "Find and post assignments",
+      "url": "/assignments",
+      "icons": [{ "src": "/icon-assignment.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Find Services",
+      "short_name": "Services",
+      "description": "Home and hostel services",
+      "url": "/services",
+      "icons": [{ "src": "/icon-services.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Study Resources",
+      "short_name": "Resources",
+      "description": "Access study materials",
+      "url": "/resources",
+      "icons": [{ "src": "/icon-resources.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Messages",
+      "short_name": "Messages",
+      "description": "Chat with other students",
+      "url": "/messages",
+      "icons": [{ "src": "/icon-messages.png", "sizes": "96x96" }]
+    }
+  ]
+}

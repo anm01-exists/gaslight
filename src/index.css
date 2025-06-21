@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Modern beige and grey theme */
+    --background: 39 100% 98%; /* Very light beige */
+    --foreground: 0 0% 15%; /* Dark grey text */
+
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 33 55% 45%; /* Warm beige primary */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 39 50% 92%; /* Light beige secondary */
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 39 30% 95%; /* Very light beige muted */
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 204 94% 94%; /* Light blue accent */
+    --accent-foreground: 204 100% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 39 20% 88%; /* Light beige border */
+    --input: 39 20% 88%;
+    --ring: 33 55% 45%;
+
+    --radius: 8px;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 33 55% 45%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 39 50% 92%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 39 20% 88%;
+    --sidebar-ring: 33 55% 45%;
+  }
+
+  .dark {
+    /* Dark mode with dark grey and warm accents */
+    --background: 0 0% 8%; /* Very dark grey */
+    --foreground: 39 20% 90%; /* Light beige text */
+
+    --card: 0 0% 12%; /* Dark grey cards */
+    --card-foreground: 39 20% 90%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 39 20% 90%;
+
+    --primary: 33 55% 55%; /* Brighter beige in dark mode */
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 15%; /* Dark grey secondary */
+    --secondary-foreground: 39 20% 90%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 204 100% 15%; /* Dark blue accent */
+    --accent-foreground: 204 94% 90%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%; /* Dark border */
+    --input: 0 0% 18%;
+    --ring: 33 55% 55%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 39 20% 90%;
+    --sidebar-primary: 33 55% 55%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 39 20% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 33 55% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-student hover:shadow-student-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium px-6 py-3 rounded-lg transition-all duration-200 border border-border;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(33 60% 55%) 100%
+    );
+  }
+
+  .gradient-background {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)) 0%,
+      hsl(39 50% 96%) 100%
+    );
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-student-lg hover:-translate-y-1;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-student-beige-600 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.4s ease-out forwards;
+  }
+
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  /* Shimmer animation for loading skeletons */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    background-size: 200% 100%;
+  }
+}

@@ -1,0 +1,38 @@
+# StudyHub - Robots.txt for SEO optimization
+
+User-agent: *
+Allow: /
+Allow: /assignments
+Allow: /services
+Allow: /resources
+Allow: /about
+Allow: /contact
+Allow: /help
+
+# Disallow admin and authentication pages
+Disallow: /admin
+Disallow: /login
+Disallow: /signup
+Disallow: /dashboard
+Disallow: /messages
+
+# Disallow API routes and private areas
+Disallow: /api/
+Disallow: /*?*
+Disallow: /search?*
+
+# Allow specific bot access to images and assets
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+
+# Sitemap location
+Sitemap: https://studyhub.app/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
